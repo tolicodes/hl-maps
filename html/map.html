@@ -1,0 +1,20 @@
+<div id="map" class="mapboxgl-map">
+    <div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate">
+        <canvas class="mapboxgl-canvas" style="position: absolute; width: 1440px; height: 700px;" tabindex="0"
+                aria-label="Map"
+                width="1440" height="700"></canvas>
+    </div>
+    <div class="mapboxgl-control-container">
+        <div class="mapboxgl-ctrl-top-left"></div>
+        <div class="mapboxgl-ctrl-top-right"></div>
+        <div class="mapboxgl-ctrl-bottom-left"></div>
+        <div class="mapboxgl-ctrl-bottom-right"></div>
+    </div>
+    <div class="get-location-btn" @click="goHome()">
+        <img src="/images/newmap-images/location.png">
+    </div>
+    <div class="custom-map-type" @click="switchStyles">
+        <img :src="otherStyle.image">
+        <span :style="{color: appropiateTextColor, fontSize: appropiateTextSize}">{{ otherStyle.formalName }}</span>
+    </div>
+</div>

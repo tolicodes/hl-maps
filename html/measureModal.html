@@ -1,0 +1,36 @@
+<!--measure tool-->
+<div class="measure-tool-wrap" :class="{menuActive : mainMenuShown , layersActive : layersMenuShown}">
+    <div class="header">
+        Measure
+        <img @click="measureToolClose" src="/images/newmap-images/x.png">
+    </div>
+    <div class="measure-label">
+        Measure distance from one place to another.
+    </div>
+    <div class="measure-body">
+        <div class="container-fluid">
+            <div class="row name-row">
+                <div class="col-xs-3 name-label">
+                    Name
+                </div>
+                <div class="col-xs-9 name-field">
+                    <input type="text" v-model="newMeasureName" value="Measure Name">
+                    <span class="time">{{ PopupsDateTime }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 btn-col">
+                    <button class="undo-btn" @click="measureToolUndo">Undo</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <button class="gray-btn" @click="measureToolDelete">Delete</button>
+                </div>
+                <div class="col-xs-6">
+                    <button class="orange-btn" @click="measureToolSave">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

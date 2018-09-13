@@ -1,0 +1,115 @@
+<header>
+    <div class="header-wrapper">
+        <div class="container clearfix">
+            <div id="logo">
+                <a class="mp-global-logo-link" href="/">Hunting Locator</a>
+            </div>
+            <nav>
+                <ul class="secondary_mobile">
+                    <li class="mobile_nav_button">
+                        <a href="#" id="mobile_nav"><i class="fa fa-bars"></i></a>
+                    </li>
+
+                    <li><a class="button" href="/account/pay/">Get Full Access</a></li>
+
+                    <li class="mobile_nav_boxbutton">
+                        <a href="/signup/" class="button">Get Full Access</a>
+                    </li>
+                </ul>
+                <ul class="secondary secondary_main">
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="/signup/" class="button">Get Full Access</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-menu-bar clearfix">
+            <div class="container">
+                <nav>
+                    <!-- main menu -->
+                    <ul class="secondary">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Hunting Leases</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" style="margin-top: -10px;">
+                                <li><a href="/leases">Browse Leases</a></li>
+                                <li><a href="/post">Post a Lease</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/outfitters/">Outfitters and Guides</a>
+                        </li>
+                        <li>
+                            <a href="/maps">Maps and Tools</a>
+                        </li>
+                        <li>
+                            <a href="/businesses/">Business Directory</a>
+                        </li>
+                        <li>
+                            <a href="/giveaways/">Giveaways</a>
+                        </li>
+                    </ul>
+                    <!-- end main menu -->
+                </nav>
+                <nav class="secondary_slider">
+                    <ul>
+                        <li>
+                            <a href="/leases/" title="Find Leases"><i class="fa fa-map-marker"></i> <span>Browse Leases</span></a>
+                        </li>
+                        <li>
+                            <a href="/post/" title="Create a Listing"><i class="fa fa-pencil-square-o"></i> <span>Post
+                                    a Lease</span></a>
+                        </li>
+                        <li>
+                            <a href="/maps/" title="Maps"><i class="fa fa-map"></i> <span>Maps &amp; Tools</span></a>
+                        </li>
+                        {if logged_in}
+                        <li class="dropdown">
+                            <a href="#" id="dropdownMenuMobile1" class="dropdown-toggle parent_acct_link" data-toggle="dropdown"
+                                aria-expanded="false">My Account</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuMobile1">
+                                <li><a href="/account/inquiries/">Messages</a></li>
+                                {exp:channel:entries channel="leases"limit="1"
+                                disable="categories|member_data|category_fields|pagination"author_id="CURRENT_USER"status="Open|Closed"}
+                                <li><a href="/account/listings/">My Leases</a></li>
+                                {/exp:channel:entries}
+                                <li><a href="/account/favorites/">Favorites</a></li>
+                                <li><a href="/account/alerts/">Alerts</a></li>
+                                <li><a href="/account">Account Settings</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{path='logout'}">Logout</a></li>
+                        {/if}
+                        <li>
+                            <a href="/outfitters/" title="Outfitters and Guides"><i class="fa fa-tree"></i> <span>Outfitters
+                                    and Guides</span></a>
+                        </li>
+                        <li>
+                            <a href="/businesses/" title="Business Directory"><i class="fa fa-building"></i> <span>Business
+                                    Directory</span></a>
+                        </li>
+                        <li>
+                            <a href="/giveaways/" title="Giveaways"><i class="fa fa-trophy"></i> <span>Giveaways</span></a>
+                        </li>
+                        {if logged_out}
+                        <li>
+                            <a href="/signup/" class="button">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="/upgrade">Premium</a>
+                        </li>
+                        <li>
+                            <a href="/login">Login</a>
+                        </li>
+                        {/if}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

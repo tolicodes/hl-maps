@@ -1,0 +1,29 @@
+<div class="content mobile-marklocation container-fluid">
+    <div class="row text-field">
+        <input class="mobile-tool-input" type="text" v-model="newMarker.name" placeholder="Name Waypoint">
+        <span class="date">{{ PopupsDateTime }}</span>
+
+
+    </div>
+    <div class="row buttons-row">
+        <h3>{{ waypointsHeading }}</h3>
+        <span class="sub-title">Select Marker</span>
+        <div class="types-inner">
+           ${require('./waypointsForm.html')}
+        </div>
+
+        <div class="col-xs-6 small-btn">
+            <button class="gray-btn" @click="deleteCurrentWaypoint">Delete</button>
+        </div>
+        <div class="col-xs-6 small-btn">
+            <button class="orange-btn" @click="saveMarker">Save</button>
+        </div>
+
+    </div>
+    <div class="row type-textarea">
+        <span class="title">
+            Notes
+        </span>
+        <textarea v-model="newMarker.notes"></textarea>
+    </div>
+</div>

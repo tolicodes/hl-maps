@@ -1,0 +1,30 @@
+<div class="mobile-tools-header row header">
+    <div class="col-xs-3 measure-trigger">
+        <label :class="{'check': tools.measure}">
+            <img class="measure" src="/images/newmap-images/mobile-measure2.png">
+            <input type="checkbox" v-model="tools.measure">
+            <span>Measure</span>
+        </label>
+    </div>
+    <div class="col-xs-3 mark-trigger">
+        <label :class="{'check': tools.markLocation}">
+            <img src="/images/newmap-images/markLocation.png">
+            <input type="checkbox" v-model="tools.markLocation">
+            <span>Mark Location</span>
+        </label>
+    </div>
+    <div class="col-xs-3 waypoint-trigger">
+        <label :class="{'check': tools.customWaypoint}">
+            <img src="/images/newmap-images/waypoint.png">
+            <input type="checkbox" v-model="tools.customWaypoint">
+            <span>Add Waypoint</span>
+        </label>
+    </div>
+    <div class="col-xs-3 track-trigger">
+        <label :class="{'check': tools.tripTracking}">
+            <img src="/images/newmap-images/startTracking.png">
+            <input type="checkbox" v-model="tools.tripTracking">
+            <span>Start Tracking</span>
+        </label>
+    </div>
+</div>

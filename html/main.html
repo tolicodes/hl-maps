@@ -1,0 +1,32 @@
+<div id="app">
+    <!-- Overlay -->
+    ${require('./header.html')}
+    ${require('./subHeader.html')}
+    ${require('./map.html')}
+    ${require('./layer-menu.html')}
+    ${require('./map-tool.html')}
+    ${require('./mobile-tools.html')}
+    ${require('./main-menu.html')}
+
+    ${require('./tripModal.html')}
+    ${require('./trackModal.html')}
+    ${require('./measureModal.html')}
+    ${require('./waypointsModal.html')}
+    ${require('./markLocationModal.html')}
+
+    ${require('./trackingConfirmPopup.html')}
+
+    ${require('./mobileToolsHeader.html')}
+    <div class="mobileMap-tools-container">
+            <div class="mobileMap-overlay"><img src="/images/newmap-images/x.png"></div>
+            <div class="container-fluid">
+                ${require('./mobileTrack.html')}
+                ${require('./mobileWaypoint.html')}
+                ${require('./mobileMarkLocations.html')}
+                ${require('./mobileMeasure.html')}
+            </div>
+        </div>
+
+    ${require('./premium-member-modal.html')}
+    ${require('./tutorial-modal.html')}
+</div>

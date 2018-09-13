@@ -1,0 +1,99 @@
+<div class="mm-menu">
+    <div class="mm-menu-title">
+
+        <a href="#" class="close-mm-menu" @click="mainMenuShown = !mainMenuShown">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+    </div>
+    <div class="mm-menu-content">
+        <ul>
+            <li :class="{'active' : currentStyle.formalName == 'Satellite'}">
+                <a href="#" @click="changeStyle('satellite-streets-v10')">
+                    <img src="/images/newmap-images/sat.jpg" alt=""> Satellite
+                </a>
+            </li>
+            <li :class="{'active' : currentStyle.formalName == 'Topoghraphy'}">
+                <a href="#" @click="changeStyle('outdoors-v9')">
+                    <img src="/images/newmap-images/topo.jpg" alt=""> Topographical
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <ul>
+            <li @click="activatePublicHuntingLands" :class="{'active' : huntingLayersShown}">
+                <a>
+                    <img src="/images/newmap-images/public.jpg" alt=""> Public Hunting Lands
+                </a>
+            </li>
+            <li v-show="huntingLayersShown" class="layers-collapse">Public Hunting Lands Legend
+                <i class="fa fa-angle-down"></i>
+            </li>
+            <div v-show="huntingLayersShown" class="legend">
+
+            </div>
+            <li @click="toggleServicesAndSuppliesLayer()" :class="{'active' : businessesLayerActive}">
+                <a>
+                    <img src="/images/newmap-images/business.jpg" alt=""> Services and Supplies
+                </a>
+            </li>
+
+        </ul>
+        <br>
+        <br>
+        <hr>
+        <ul id="mm-icons-ul">
+            <li>
+                <label class="measure-radio">
+                    <input type="checkbox" v-model="tools.measure">
+                    <img src="../img/tools/measure.png" alt="">
+                    <span>Measure</span>
+                </label>
+            </li>
+            <li>
+                <label class="marklocation-radio">
+                    <input type="checkbox" v-model="tools.markLocation">
+                    <img src="../img/tools/marklocation.png" alt="">
+                    <span>Mark Location</span>
+                </label>
+            </li>
+            <li>
+                <label class="waypoint-radio">
+                    <input type="checkbox" v-model="tools.customWaypoint">
+                    <img src="../img/tools//waypoint.png" alt="">
+                    <span>Add Waypoint</span>
+                </label>
+            </li>
+            <li>
+                <label class="track-radio">
+                    <input type="checkbox" v-model="tools.tripTracking">
+                    <img src="../img/tools/track.png" alt="">
+                    <span>Start Tracking</span>
+                </label>
+            </li>
+
+        </ul>
+        <hr>
+        <ul id="mm-text-ul">
+            <li class="show-tutorial">
+                <a href="#">
+                    Tutorial
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Get Help
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Terms of Service
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

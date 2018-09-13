@@ -1,0 +1,222 @@
+.mobile-backdrop {
+    background-color: black;
+    opacity: .8;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+
+   @media(min-width: 1370px) {
+       display: none;
+   }
+}
+
+.tutorial-modal {
+    z-index: 11000;
+
+
+    .mobile-close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(40%, -40%);
+        z-index: 11000;
+
+        @media(min-width: 1370px) {
+            display: none;
+        }
+    }
+
+    .already-have-account {
+        color: lightgray;
+        text-align: center;
+        margin-bottom: 20px; 
+    
+        .login {
+            color: lightsalmon;
+        }
+    
+        @media(min-width: 1370px) {
+            position: absolute;
+            bottom: -50px;
+            left: -20px;
+        }
+    }
+
+    .mobile-header {
+        .main-title {
+            font-family: 'Proxima Nova Extrabold', Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 26px;
+            text-align: center;
+            text-transform: none;
+            margin: 0;
+
+            color: #ff6637;
+        }
+        .main-subtitle {
+            font-family: 'Proxima Nova Thin', Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 49px;
+            text-transform: none;
+            text-align: center;
+            color: lightgray;
+            margin: 0;
+            
+            .highlight {
+                font-family: 'Proxima Nova Light', Helvetica, Arial, sans-serif;
+                color: white;
+            }
+        }
+
+        .screenshots {
+            width: 100%;
+        }
+
+        @media(min-width: 1370px) {
+            display: none;
+        }
+    }
+}
+.cta-row-style-v1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11000;
+    opacity: .95;
+    
+    .main-pre-mobile-title {
+        font-weight: 500;
+    }
+}
+
+.map-module-row-style-v1 {
+    background: url(/images/layout/bg-maps-module-style-v1.jpg) top repeat;
+    background-size: cover;
+    background-color: #FFFFFF;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    position: relative;
+
+    .container {
+        width: 1370px;
+        max-width: 90%;
+    }
+
+    @media (max-width: 1370px) {
+        & {
+            width: 600px;
+            max-width: 90vw;
+            height: 70vh;
+            overflow-y: scroll;
+            padding: 10px 0;
+        }
+
+        .left {
+            display: none;
+        }
+
+        .col {
+            width: 100%;
+        }
+    }
+
+    #map-module-image {
+        margin-left: -70px;
+        margin-top: 20px;
+    }
+    
+    .map-module-row {
+        cursor: pointer;
+        opacity: .40;
+        margin-bottom: 10px;
+
+        @media (max-width: 1370px) {
+            & {
+                opacity: 1.0;
+            }
+        }
+
+        &[data-name="measure"] {
+            margin-top: 30px;
+        }
+
+        &[data-name="waypoint"] {
+            margin-top: 20px;
+        }
+
+        &[data-name="tracking"] {
+            margin-bottom: 0px;
+            margin-top: -10px;
+        }
+        
+        .information {
+            padding: 0;
+            color: #FFFFFF;
+            
+            ul {
+                li {
+                    list-style-type: disc;
+                    list-style-position: inside;
+                }
+            }
+            
+            .information-title {
+                color: #FFFFFF;
+                font-family: 'Proxima Nova Extrabold', Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                font-size: 22px;
+                line-height: 27px;
+            }
+            
+            .information-content {
+                color: #FFFFFF;
+                font-family: 'Proxima Nova', Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        } 
+    }
+    
+    .map-module-row-active {
+        opacity: 1.0;
+    }
+}
+
+.button {
+    height: auto!important;
+    width: auto;
+    padding: 15px 30px;
+    font-family: Karla,Helvetica,Arial,sans-serif;
+    text-shadow: none;
+    font-size: 20px;
+    font-weight: 400;
+    background: #DF7527;
+    color: #FFF;
+    box-shadow: 4px 6px 14px rgba(0,0,0,.63);
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #da6c0b;
+    text-decoration: none;
+
+    &.instructions {
+        width: auto;
+        padding: 15px 30px;
+        font-family: Karla,Helvetica,Arial,sans-serif;
+        text-shadow: none;
+        font-size: 20px;
+        font-weight: 400;
+        background: #DF7527;
+        color: #FFF;
+        box-shadow: 4px 6px 14px rgba(0,0,0,.63);
+        -moz-box-shadow: 4px 6px 14px rgba(0,0,0,.63);
+        -webkit-box-shadow: 4px 6px 14px rgba(0,0,0,.63);
+        margin-bottom: 20px;
+    }    
+}

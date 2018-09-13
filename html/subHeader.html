@@ -1,0 +1,46 @@
+<div id="sub-header">            
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <div class="overlay2"></div>
+
+    <div class="top">
+        <a class="mm-toggle" @click="mainMenuShown = !mainMenuShown">
+            <img src="/images/newmap-images/hamburger.png" alt="">
+        </a>
+
+        <div class="col-sm-3 search-col">
+            <div class="row search-row">
+                <div class="input-group search-input-group">
+                    <i class="fa fa-search"></i>
+                    <img src="/images/newmap-images/angle.png" class="angle-down">
+                    <input id="searchInput" v-model="searchKeyword" @keyup="findSearchPlaces()" type="text"
+                        class="form-control" placeholder="Search Keyword or Address"
+                        aria-label="Text input with dropdown button">
+                    <div class="input-group-btn">
+                        <button id="state-toggle" type="button" class="btn btn-default">
+                            State
+                        </button>
+                    </div>
+                </div>
+                <ul class="state-dropdown">
+                    <li v-for="state in states" @click="stateSelected(state.state)">{{ state.state }}</li>
+                </ul>
+                <div class="onSearch" v-if="searchingPlaces.length != 0">
+                    <div class="onSearch-inner">
+                        <ul>
+                            <li v-for="place in searchingPlaces" @click="goToSearchingPlace(place)"><i
+                                    class="fa fa-map-marker"></i> {{ place.name }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-search-toggle"></div>
+    </div>
+</div>
+
+<div class="layertoggle" @click="layersMenuShown = !layersMenuShown">
+    <img src="/images/newmap-images/map_layers.png" alt="" class="side-tools-icon">
+    Layers
+</div>

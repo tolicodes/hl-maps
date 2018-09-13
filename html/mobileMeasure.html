@@ -1,0 +1,21 @@
+<div class="content mobile-measure">
+    <div class="row text-field">
+        <label>
+            Name:
+            <input class="mobile-tool-input" type="text" v-model="newMeasureName">
+            <span class="date">{{ PopupsDateTime }}</span>
+        </label>
+    </div>
+    <div class="row buttons-row">
+        <h3>Measure Distance</h3>
+        <div class="col-xs-12 big-btn">
+            <button class="undo-btn" @click="measureToolUndo">Undo</button>
+        </div>
+        <div class="col-xs-6 small-btn">
+            <button class="gray-btn" @click="measureToolDelete">Delete</button>
+        </div>
+        <div class="col-xs-6 small-btn">
+            <button class="orange-btn" @click="measureToolSave">Save</button>
+        </div>
+    </div>
+</div>

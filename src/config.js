@@ -1,0 +1,1 @@
+export const accessToken = 'pk.eyJ1IjoibGlsZXNzYW0iLCJhIjoiY2pjYWluM2JhMGZscjM1bjJqeGVoa2RjbiJ9.SWYhoOaX-z02Mo8sHohyWA';

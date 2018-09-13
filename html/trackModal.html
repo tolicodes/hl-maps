@@ -1,0 +1,50 @@
+<div class="track-tool-wrap" :class="{menuActive : mainMenuShown , layersActive : layersMenuShown}">
+    <div class="header">
+        Start tracking
+        <img src="/images/newmap-images/x.png">
+    </div>
+    <div class="track-label">
+        Track and/or record your trip
+    </div>
+    <div class="track-body">
+        <div class="container-fluid">
+            <div class="row name-row">
+                <div class="col-xs-3 name-label">
+                    Name
+                </div>
+                <div class="col-xs-9 name-field">
+                    <input type="text" v-model="newTripName">
+                    <span class="time">{{ PopupsDateTime }}</span>
+                </div>
+            </div>
+            <div class="row" v-if="currentTrip == null">
+                <div class="col-xs-12 btn-col">
+                    <button class="green-btn" @click="startTrip">{{ tripTrackingToolLabel }}</button>
+                </div>
+            </div>
+
+            <div class="row" v-if="currentTrip != null && tripIsGoing == false">
+                <div class="col-xs-12 btn-col">
+                    <button class="green-btn" @click="resumeTrip">Resume Tracking</button>
+                </div>
+            </div>
+
+            <div class="row" v-if="currentTrip != null && tripIsGoing == true">
+                <div class="col-xs-6">
+                    <button class="gray-btn lighter-gray" @click="pauseTrip">Pause</button>
+                </div>
+                <div class="col-xs-6">
+                    <button class="orange-btn btn-danger" @click="stopTripOnly">Stop</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <button class="gray-btn" @click="stopAndDeleteCurrentTrip">Delete</button>
+                </div>
+                <div class="col-xs-6">
+                    <button class="orange-btn" @click="saveTrip">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

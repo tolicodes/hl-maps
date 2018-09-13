@@ -1,0 +1,19 @@
+<div class="mobile-tools">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 layertoggle-mobile">
+                <img src="/images/newmap-images/mobile-layers.png">
+                <span>Layers</span>
+            </div>
+            <div class="col-xs-4" @click="switchStyles">
+                <span class="sat">{{ currentStyle.formalName }}</span>
+                <img src="/images/newmap-images/mobile-maps.png">
+                <span>Base Map</span>
+            </div>
+            <div class="col-xs-4 mobile-tools-trigger" @click="onMobileToolsClick">
+                <img src="/images/newmap-images/mobile-tools.png">
+                <span>Tools</span>
+            </div>
+        </div>
+    </div>
+</div>

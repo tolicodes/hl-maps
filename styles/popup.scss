@@ -1,0 +1,231 @@
+.hunting-layer-popup {
+    background-color: #f9f6f1;
+    .popup-header {
+        padding: 20px;
+        background-color: white;
+        .info-image {
+            float: left;
+            margin-right: 10px;
+            width: 30px;
+        }
+        .about-text {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .lat-lng {
+            font-size: 10px;
+        }
+        .lat {
+            margin-right: 10px;
+        }
+    }
+    .info-body .row {
+        padding: 10px;
+        margin: 0;
+        .info-label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .property-name {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .property-value {
+            font-size: 12px;
+            color: gray;
+        }
+    }
+}
+.modal-backdrop {
+    display: none;
+    position: fixed;
+    z-index: 4999;
+    background-color: black;
+    opacity: .5;
+    &.on {
+        display: block;
+    }
+}
+.premium-member-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    z-index: 5000;
+    padding: 20px 0;
+    width: 80vw;
+    max-height: 80vh;
+    overflow-y: scroll;
+
+    @media(max-width: 500px) {
+        background: transparent;
+    }
+
+    
+    &.on {
+        display: block;
+    }
+
+    .mobile {
+        font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 20px;
+        background-color: white;
+        display: none;
+
+        @media(max-width: 500px) {
+            display: block;
+        }
+
+        .header-image {
+            width: 100%;
+        }
+
+        .content {
+            padding: 20px;
+
+            .benefits {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+
+                li {
+                    margin-bottom: 10px;
+                }
+
+                .heading {
+                    font-weight: bold;
+                }
+            }
+
+            .join-button {
+                padding: 20px;
+                color: #e27438;
+                border: 2px solid #e27438;
+                margin-top: 40px;
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+
+    .desktop {
+        display: none;
+        text-align: center;
+
+        @media (max-width:823px) {
+            .column {
+                width: 100%;
+            }
+            .column-1 {
+                margin-top: 0;
+                a {
+                    margin: 0 auto;
+                    width: 100%;
+                }
+            }
+            .column-2 {
+                margin-top: 20px;
+                a {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        > .container {
+            padding: 0;
+    
+            h2 {
+                margin-bottom: 10px;
+            }
+            h3 {
+                color: #F68431;
+                font-size: 24px;
+            }
+            a.button {
+                margin: 10px 0 50px;
+            }
+        }
+
+        .column {
+            display: inline-block;
+            margin: 0;
+            width: 49%;
+            a {
+                display: block;
+                padding: 30px 10px 30px 30px;
+                width: 380px;
+            }
+            ul {
+                padding-left: 0;
+                li {
+                    background: url(/images/checkmark-grey.png) no-repeat 0px 2px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    padding-left: 34px;
+                    margin: 15px 10px;
+                    min-height: 26px;
+                    text-align: left;
+                }
+            }
+            hr {
+                border-color: #ddd;
+                margin-left: 40px;
+            }
+            h2 {
+                background: url(/images/logo-icon-smaller.png) no-repeat;
+                color: #000;
+                text-transform: none;
+                text-align: left;
+                font-size: 36px;
+                line-height: 40px;
+                padding-left: 40px;
+                small {
+                    color: #424242;
+                    display: block;
+                    font-size: 24px;
+                }
+            }
+        }
+        .column-1 {
+            a {
+                background: #EFEFEF;
+                border: 1px solid #D6D6D6;
+                border-top: 8px solid #D6D6D6;
+                float: right;
+                ul li {
+                    color: #C5C5C5;
+                    &.active {
+                        background: url(/images/checkmark-orange.png) no-repeat 0px 2px;
+                        color: #000;
+                    }
+                }
+            }
+            h2 {
+                background: url(/images/logo-icon-gray.png) no-repeat;
+            }
+        }
+        .column-2 a {
+            background: url(/images/bg-map.jpg);
+            border-top: 10px solid #FF8921;
+            box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.75);
+            padding: 30px;
+            width: 404px;
+            ul li {
+                background: url(/images/checkmark-orange.png) no-repeat 0px 2px;
+                color: #000;
+            }
+            .button {
+                border: 1px solid #fff;
+                box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.2);
+            }
+        }
+
+        @media (min-width: 501px) {
+            display: block;
+        }
+    }
+}

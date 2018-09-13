@@ -1,0 +1,35 @@
+<div class="layer-menu">
+    <div class="mm-layer-title">
+        <h4>Map Layers</h4>
+        <div class="close-sht" @click="layersMenuShown = !layersMenuShown"></div>
+        <a href="#" class="close-layer-menu" @click="layersMenuShown = !layersMenuShown">
+            <i class="fas fa-angle-double-left"></i>
+        </a>
+    </div>
+    <div class="mm-menu-content">
+        <ul>
+            <li @click="activatePublicHuntingLands" :class="{'active' : huntingLayersShown}">
+                <a>
+                    <img src="/images/newmap-images/public.jpg" alt="">
+                    Public Hunting Lands
+                </a>
+            </li>
+            
+            <li v-show="huntingLayersShown" class="layers-collapse">
+                Public Hunting Lands Legend
+                <i class="fa fa-angle-down"></i>
+            </li>
+            
+            <div v-show="huntingLayersShown" class="legend"></div>
+            
+            <li :class="{'active' : businessesLayerActive}">
+                <a @click="toggleServicesAndSuppliesLayer()">
+                    <img src="/images/newmap-images/business.jpg" alt="">
+                    Services and Supplies
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
